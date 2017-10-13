@@ -613,7 +613,7 @@ class @ledger.dongle.Dongle extends EventEmitter
     Errors.throw(Errors.DongleLocked) if @state != States.UNLOCKED
     d = ledger.defer(callback)
     return d.resolve(@_xpubs[path]).promise if @_xpubs[path]?
-    if ledger.config.network.name === 'decred'
+    if ledger.config.network.name == 'decred'
       xpub = new ledger.wallet.ExtendedPublicKey(@, path)
     else 
       xpub = new ledger.wallet.ExtendedPublicKeyBlake(@, path)

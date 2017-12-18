@@ -447,6 +447,7 @@ if (typeof chromeDevice == "undefined") {
         pid: (typeof pid != "undefined") ? pid : 0x1b7c
       }
     };
+    var usagePage = up
 
     var deferred = Q.defer();
 
@@ -463,7 +464,6 @@ if (typeof chromeDevice == "undefined") {
     var pidHid = pid;
     var pidHid2 = pidHid;
     var pidHid3 = pidHid;
-    var usagePage;
     // Probe automatically the associated transport supposing the client used the WinUSB transport
     if (pid == 0x1808) {
       pidHid = 0x1807;

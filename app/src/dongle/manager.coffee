@@ -86,7 +86,7 @@ class @ledger.dongle.Manager extends EventEmitter
         for dev in d
           if (dev.collections[0].usagePage == ledger.dongle.usagePage)
             devices = [dev]
-            cb?(devices) if !hasNext or devices.length > 0
+        cb?(devices) if !hasNext or devices.length > 0
         next()
 
   _scanDongle: (device) ->

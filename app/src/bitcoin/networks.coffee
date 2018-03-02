@@ -118,6 +118,14 @@ bitcoin.networks.digibyte =
   pubKeyHash: 30
   scriptHash: 5
 
+bitcoin.networks.zcoin =
+  magicPrefix: '\x19Zcoin Signed Message:\n'
+  bip32:
+    public: 0x0488b21e,
+    private: 0x0488ade4
+  pubKeyHash: 82
+  scriptHash: 7
+
 ledger.bitcoin ||= {}
 ledger.bitcoin.Networks =
   bitcoin:
@@ -873,6 +881,27 @@ ledger.bitcoin.Networks =
       P2SH: 5
       XPUB: 0x0488b21E
     bitcoinjs: bitcoin.networks.digibyte
+    dust: 10000
+    handleFeePerByte: no
+    areTransactionTimestamped: no
+
+  zcoin:
+    name: 'zcoin'
+    display_name: 'zcoin'
+    plural: 'zcoins'
+    scheme: 'zcoin:'
+    bolosAppName: 'zcoin'
+    ticker: 'xzc'
+    tickerKey:
+      from: 'fromXZC'
+      to: 'toXZC'
+    bip44_coin_type: '136'
+    isSegwitSupported: no
+    version:
+      regular: 82
+      P2SH: 7
+      XPUB: 0x0488b21e
+    bitcoinjs: bitcoin.networks.zcoin
     dust: 10000
     handleFeePerByte: no
     areTransactionTimestamped: no

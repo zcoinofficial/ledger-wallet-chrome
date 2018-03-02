@@ -717,4 +717,19 @@ ledger.preferences.digibyte =
         address: 'https://digiexplorer.info/tx/%s'
     discoveryGap: 20
 
+ledger.preferences.zcoin =
+  Display:
+    units:
+      bitcoin:
+        symbol: 'XZC'
+        unit: 8
+
+# Coin preferences
+  Coin:
+    explorers:
+      insight:
+        name: 'insight.zcoin.io'
+        address: 'https://insight.zcoin.io/tx/%s'
+    discoveryGap: 20
+
 ledger.preferences.common.setCoin("bitcoin")
